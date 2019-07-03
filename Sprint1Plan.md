@@ -1,10 +1,10 @@
 # SPRINT 1 PLAN
 
-##AI-VOCABUALRY BOOK
+## AI-VOCABUALRY BOOK
 
 SPRINT COMPLETION DATE : 07/07/2019
 
-REVISION # : 1
+REVISION #1
 
 REVISION DATE : 07/03/2019
 
@@ -28,7 +28,7 @@ book."
 
 #### TASK 4 : Learning about Python (3)
 
-#### TASK 5 : Learning about Django (17)
+#### TASK 5 : Learning about Django (7)
 
 #### TASK 6 : Make template for login system using HTML (1)
 
@@ -38,7 +38,7 @@ book."
 
 
 
-Total for user story 1 : 38
+Total for user story 1 : 28
 
 
 
