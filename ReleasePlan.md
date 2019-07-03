@@ -10,7 +10,7 @@ REVISION DATE : 07/03/2019
 
 
 
-## HIGH LEVEL GOALS : 
+## HIGH LEVEL GOALS 
 1. Make login system 
 2. Make frequency-based vocabulary book
 3. Make recommendation-based vocabulary book
@@ -19,9 +19,9 @@ REVISION DATE : 07/03/2019
 
 #### USER STORY 1
 
-(10) "As a user , I want a login system to get into the site to access the vocabulary
+ "As a user , I want a login system to get into the site to access the vocabulary
 
-book."
+book." (10)
 
 
 
@@ -29,7 +29,7 @@ book."
 
 #### USER STORY 1
 
-(10) "As a user, I want to input texts to see the frequencies of the words in the text"
+ "As a user, I want to input texts to see the frequencies of the words in the text" (10)
 
 
 
@@ -37,9 +37,9 @@ book."
 
 #### USER STORY 1
 
-(10) "As a user, I want to take quizzes so that the app can give me more personalized
+ "As a user, I want to take quizzes so that the app can give me more personalized
 
-& specific word recommendations."
+& specific word recommendations." (10)
 
 
 
