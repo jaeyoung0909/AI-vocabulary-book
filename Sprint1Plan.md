@@ -38,7 +38,7 @@ book."
 
 
 
-Total for user story 1 : 38
+Total for user story 1 : 28
 
 
 
