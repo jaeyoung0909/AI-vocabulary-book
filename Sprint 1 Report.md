@@ -21,4 +21,9 @@
 - Constructing sign in / sign up.
 
 ## Work Completion Rate
-- User stories completed: 
+- User stories completed: 1 / 1
+- Completed Ideal Working Hours: 28
+- Days for Prior Sprint: 6
+- User Stories / Day: 1/6 
+- Ideal Working Hours / Day: 14/3
+- No burnup chart available
