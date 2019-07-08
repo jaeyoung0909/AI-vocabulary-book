@@ -24,6 +24,8 @@ TASK 4 : Contruct DB for saving known and unknown words. (3)
 
 TASK 5 : Upload app to AWS (1)
 
+Total : 14
+
 ## TEAM ROLES
 
 JAEYOUNG HWANG : Producet Owner
@@ -33,6 +35,11 @@ SIHWAN PARK : Scrum member
 ALEX HENSHALL : Scrum Master
 
 ## Initial task assignment
+ALEX HENSHALL : TASK 1
+
+SIHWAN PARK : TASK 1
+
+JAEYOUNG HWANG : TASK 2, 3, 4, 5
 
 ## Initial burnup chart 
 
