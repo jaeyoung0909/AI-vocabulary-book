@@ -64,7 +64,7 @@ ALEX HENSHALL : user story1, task 1
 
 ## Initial burnup chart
 
-![burnup chart](./burnup.jpg)
+![burnup chart](./initialBurnUpChart.jpg)
 
 ## Initial scrum board
 
