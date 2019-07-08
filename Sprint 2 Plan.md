@@ -24,6 +24,8 @@ TASK 4 : Contruct DB for saving known and unknown words. (3)
 
 TASK 5 : Upload app to AWS (1)
 
+Total : 14
+
 ## TEAM ROLES
 
 JAEYOUNG HWANG : Producet Owner
