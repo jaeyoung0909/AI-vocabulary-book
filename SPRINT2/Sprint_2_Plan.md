@@ -43,6 +43,8 @@ JAEYOUNG HWANG : TASK 2, 3, 4, 5
 
 ## Initial burnup chart 
 
+![burnupChart](./initialBurnUpChart.jpeg)
+
 ## Initial scrum board
 
 Trello :  https://trello.com/b/PSKAaIzM/make-template-for-login-system
