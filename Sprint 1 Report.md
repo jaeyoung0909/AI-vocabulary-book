@@ -8,7 +8,9 @@
 
 ## Actions to start doing
 
-- The team should talk about their progress matter, since the person, who already know much about others problems, could help the others.
+- regular in-person meetings with "daily" scrum
+- answer the three daily scrum questions
+- more knowledgeable teammates give help to the less knowledgeable teammates
 
 ## Actions to keep doing
 
@@ -17,3 +19,6 @@
 ## Work completed 
 
 - Constructing sign in / sign up.
+
+## Work Completion Rate
+- User stories completed: 
