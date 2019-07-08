@@ -34,7 +34,7 @@ ALEX HENSHALL : Scrum Master
 
 ## Initial task assignment
 ALEX HENSHALL : TASK 1
-SIHWANG PARK : TASK 1
+SIHWAN PARK : TASK 1
 JAEYOUNG HWANG : TASK 2, 3, 4, 5
 
 ## Initial burnup chart 
