@@ -26,4 +26,5 @@
 - Days for Prior Sprint: 6
 - User Stories / Day: 1/6 
 - Ideal Working Hours / Day: 14/3
-![burnupChart](./burnup.jpg)
+
+![burnupChart](./burnup.jpeg)
