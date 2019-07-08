@@ -16,7 +16,7 @@ GOAL : Add frequency checker to application
 
 TASK 1 : Understanding frequency check algorithm and implementation using JS (2)
 
-TASK 2 : UI of text input and knwon word check box using HTML and CSS (5)
+TASK 2 : UI of text input and known word check box using HTML and CSS (5)
 
 TASK 3 : Attach UI to Django app (3)
 
