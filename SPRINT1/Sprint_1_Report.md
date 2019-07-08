@@ -27,4 +27,4 @@
 - User Stories / Day: 1/6 
 - Ideal Working Hours / Day: 14/3
 
-![burnupChart](./burnup.jpeg)
+![burnupChart](./finalBurnUpChart.jpeg)
