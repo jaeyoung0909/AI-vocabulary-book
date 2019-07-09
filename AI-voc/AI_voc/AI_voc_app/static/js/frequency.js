@@ -14,4 +14,5 @@ var freq_checker = function wordFreq(string) {
     return ordered_freqMap.sort(function(a, b) {
         return a[1] - b[1];
     });
-}
+};
+
