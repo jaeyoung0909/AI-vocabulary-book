@@ -1,0 +1,13 @@
+input {
+    width:100%;
+}
+p.hey {
+    font-size : 40px;    
+}
+
+input[type="checkbox"].known_checker {
+    display: inline-block;
+    width: 15px;
+    vertical-align: top;
+    float: left;
+}
