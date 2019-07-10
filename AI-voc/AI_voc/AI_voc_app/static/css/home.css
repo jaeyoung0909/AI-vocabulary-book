@@ -1,6 +1,7 @@
-input {
-    width:100%;
-    height: 50%;
+#user_text {
+    width:80%;
+    border-radius: 8px;
+    font-size: 12px;
 }
 p.hey {
     font-size : 40px;    
