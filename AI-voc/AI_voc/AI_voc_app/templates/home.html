@@ -4,25 +4,23 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-    Hi {{ user.username }}!
+    
     <form>
         <input type="text", id="user_text", name="user_text">
     </form>
   
-    <button type="button">frequency check</button>
-        <p>
-            make <input type="checkbox", class = "known_checker">
-        </p>
-        <p>
-            do <input type="checkbox", class = "known_checker">
-        </p>
-        <p>
-            go <input type="checkbox", class = "known_checker">
-        </p>
-        <p>
-            take <input type="checkbox", class = "known_checker">
-        </p>
+    <button type="button", onclick="showList()">frequency check</button>
+
+    <div id='list'>
+
+    </div>
+
+    <button>Submit</button>
+
     <p>
+      <p>
+          user  {{ user.username }}
+      </p>
       <a href="{% url 'logout' %}">logout</a>
     </p>
 {% else %}
