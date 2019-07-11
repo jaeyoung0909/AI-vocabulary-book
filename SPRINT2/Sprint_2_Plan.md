@@ -57,7 +57,7 @@ THU	1:30 - 3:30
 
 WED	at TA meeting
 
-FRI	1:30 - 3:30
+FRI	6:00 - 8:00
 
 SAT	1:30 - 3:30
 
