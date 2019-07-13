@@ -15,20 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from rest_framework import routers 
+# from rest_framework import routers 
 from AI_voc_app import views 
 from django.views.generic.base import TemplateView 
 
-router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+# router = routers.DefaultRouter()
+# router.register(r'users', views.UserViewSet)
+# router.register(r'groups', views.GroupViewSet)
 
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     # path('', include(router.urls)),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('accounts/', include('AI_voc_app.urls')),
     path('accounts/', include('django.contrib.auth.urls'))
 ]
