@@ -10,9 +10,6 @@
 {% endblock %}
 {% block content %}
 {% if user.is_authenticated %}
-    <!-- <form>
-        <input type="text", id="user_text", name="user_text">
-    </form> -->
     <textarea id="user_text", rows="10", cols="50">
     </textarea>
   
@@ -22,7 +19,7 @@
 
     </div>
 
-    <button>Submit</button>
+    <button type="button", onclick="submit()">Submit</button>
 
     <p>
       <p>

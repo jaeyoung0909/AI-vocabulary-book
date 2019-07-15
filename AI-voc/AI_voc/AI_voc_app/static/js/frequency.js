@@ -18,9 +18,9 @@ var freqChecker = function wordFreq(string) {
 };
 
 var showList = function show() {
+    document.getElementById('list').innerHTML = "";
     var string = document.getElementById('user_text').value;
     var ordered = freqChecker(string);
-    console.log(ordered);
     for (var w in ordered) {
 
         var elem = document.createElement('p');
@@ -28,12 +28,31 @@ var showList = function show() {
         var input = document.createElement('INPUT');
         input.setAttribute ('type', 'checkbox');
         input.setAttribute ('class', 'known_checker');
+        input.setAttribute ('value', ordered[w][0]);
 
         elem.appendChild (word);
         elem.appendChild (input);
         document.getElementById('list').appendChild (elem); 
+        if (w > 15) {
+            break;
+        }
     }
 };
+
+var submit = function submit() {
+    var list = document.getElementsByClassName('known_checker');
+    for (var n in list) {
+        if (list[n].checked == 0) {
+            console.log ("don't know " + list[n].value);
+        }
+        else if (list[n].checked == 1) {
+            console.log ("know " + list[n].value);
+        }
+        else {
+            console.log ("error : checked value is neither 0 nor 1");
+        } 
+    }
+}
 
 var myFunction = function (){ 
     console.log("hello, world! dfdfdf") 
