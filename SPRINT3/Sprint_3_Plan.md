@@ -48,7 +48,7 @@ JAEYOUNG HWANG : TASK 4
 
 ## Initial burnup chart 
 
-![burnupChart](./initialBurnUpChart.jpeg)
+![burnupChart](./initialBurnUpChart.jpg)
 
 ## Initial scrum board
 
