@@ -4,27 +4,32 @@
 
 ## Actions to stop doing 
 
-- Nothing 
+- Stop working on learning spikes.
 
 ## Actions to start doing
+
+- Start pair programming 
+
+
+## Actions to keep doing
 
 - regular in-person meetings with "daily" scrum
 - answer the three daily scrum questions
 - more knowledgeable teammates give help to the less knowledgeable teammates
 
-## Actions to keep doing
-
-- The team should keep studying web technology such as HTML, CSS
-
 ## Work completed 
 
-- Constructing sign in / sign up.
+- Learning Django
+- Implementing frequency checker
+- making text input UI
+- Construct DB for saving known and unknown words
+- Upload app to AWS
 
 ## Work Completion Rate
 - User stories completed: 1 / 1
-- Completed Ideal Working Hours: 28
-- Days for Prior Sprint: 6
-- User Stories / Day: 1/6 
-- Ideal Working Hours / Day: 14/3
+- Completed Ideal Working Hours: 34
+- Days for Prior Sprint: 7
+- User Stories / Day: 1/7 
+- Ideal Working Hours / Day: 34/7 ~= 5
 
 ![burnupChart](./finalBurnUpChart.jpeg)
