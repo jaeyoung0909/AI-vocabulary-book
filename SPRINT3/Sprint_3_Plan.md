@@ -2,29 +2,34 @@
 
 ## AI-VOCABULARY BOOK
 
-SPRINT COMPLETION DATE : July.15.2019
+SPRINT COMPLETION DATE : July.22.2019
 
 REVISON #1
 
-REVISON DATE : July.8.2019
+REVISON DATE : July.15.2019
 
-GOAL : Add frequency checker to application
+GOAL : Add recommandation system to application
 
-## USER STORY 2
+## USER STORY 3
 
-" As a user, I want to input texts to see the frequencies of the words in the text "
+" As a user, I want to take quizzes so that the app can give me more personalized & specific word recommendations. "
 
-TASK 1 : Understanding frequency check algorithm and implementation using JS (2)
+TASK 1 : Understand SVD algorithm and implement SVD using JS (2)
 
-TASK 2 : UI of text input and known word check box using HTML and CSS (5)
+TASK 2 : Gather learning data & Estimate accuracy of SVD (11) 
 
-TASK 3 : Attach UI to Django app (3)
+TASK 3 : UI for recommended words list using HTML and CSS & Attach UI to Django app (2)
 
-TASK 4 : Contruct DB for saving known and unknown words. (3)
+TASK 4 : Apply translation API (1)
 
-TASK 5 : Upload app to AWS (1)
 
-Total : 14
+" As a user, I want to review my unknwon words, so that I can see what words were previously unknwon (they still might be unfamiliar). "
+
+TASK 5 : UI for review page (5)
+
+TASK 6 : Construct quiz system (3)
+
+Total : 24
 
 ## TEAM ROLES
 
@@ -35,11 +40,11 @@ SIHWAN PARK : Scrum member
 ALEX HENSHALL : Scrum Master
 
 ## Initial task assignment
-ALEX HENSHALL : TASK 1
+ALEX HENSHALL : TASK 3, 5, 6
 
-SIHWAN PARK : TASK 1
+SIHWAN PARK : TASK 1, 2
 
-JAEYOUNG HWANG : TASK 2, 3, 4, 5
+JAEYOUNG HWANG : TASK 4
 
 ## Initial burnup chart 
 
@@ -57,6 +62,6 @@ THU	1:30 - 3:30
 
 WED	at TA meeting
 
-FRI	6:00 - 8:00
+THU 3:30 - 5:30
 
-SAT	1:30 - 3:30
+SUN	1:30 - 3:30
