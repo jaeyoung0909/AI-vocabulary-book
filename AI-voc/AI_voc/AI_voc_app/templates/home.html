@@ -18,7 +18,7 @@
     <div id='list'>
 
     </div>
-
+    {% csrf_token %}
     <button type="button", onclick="submit()">Submit</button>
 
     <p>
@@ -30,5 +30,7 @@
 {% else %}
     <p>You are not logged in</p>
     <a href="{% url 'login' %}">login</a>
+    <p>Do you want to sign up</p>
+    <a href="{% url 'signup' %}">sign up</a>
 {% endif %}
 {% endblock %}
