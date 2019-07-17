@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 'rest_framework',
     'AI_voc_app.apps.AiVocAppConfig',
+    'AI_voc',
 ]
 
 MIDDLEWARE = [

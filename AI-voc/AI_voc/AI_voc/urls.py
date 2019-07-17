@@ -26,9 +26,8 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    # path('', include(router.urls)),
     path('admin/', admin.site.urls),
-    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('accounts/', include('AI_voc_app.urls')),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('update/', include('AI_voc_app.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

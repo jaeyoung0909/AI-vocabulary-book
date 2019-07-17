@@ -10,9 +10,6 @@
 {% endblock %}
 {% block content %}
 {% if user.is_authenticated %}
-    <!-- <form>
-        <input type="text", id="user_text", name="user_text">
-    </form> -->
     <textarea id="user_text", rows="10", cols="50">
     </textarea>
   
@@ -21,8 +18,8 @@
     <div id='list'>
 
     </div>
-
-    <button>Submit</button>
+    {% csrf_token %}
+    <button type="button", onclick="submit()">Submit</button>
 
     <p>
       <p>
@@ -33,5 +30,7 @@
 {% else %}
     <p>You are not logged in</p>
     <a href="{% url 'login' %}">login</a>
+    <p>Do you want to sign up</p>
+    <a href="{% url 'signup' %}">sign up</a>
 {% endif %}
 {% endblock %}
