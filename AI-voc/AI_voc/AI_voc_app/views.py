@@ -53,7 +53,7 @@ def getFreqWords (request):
     if request.method == 'GET':
         username = request.user
         userAbilities = Ability.objects.filter(user=username)
-        if userAbilities.count() <= 0:
+        if Vocabulary.objects.all().count() == 0 and userAbilities.count() <= 0:
             print("user initialization error")
             return render(request, 'home.html')
         whetherList = []
