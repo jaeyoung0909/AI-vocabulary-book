@@ -36,15 +36,25 @@ def updateUserAbility (request):
             if voc.count() is 1:
                 userAbility = Ability.objects.get(user=user, word=voc[0])
                 print(userAbility.user.username)
-                userAbility.ability = 1 
+                if v is 0:
+                    userAbility.ability = -1
+                elif v is 1:
+                    userAbility.ability = 1 
+                else:
+                    print("ERROR: ability value")
                 userAbility.save()
             elif voc.count() == 0:
                 newWord = Vocabulary.objects.create(word=k)
                 for u in User.objects.all():
                     Ability.objects.create(user=u, word=newWord)
-                ua = Ability.objects.get(user=user, word=newWord)
-                ua.ability = -1
-                ua.save(['ability'])
+                userAbility = Ability.objects.get(user=user, word=newWord)
+                if v is 0:
+                    userAbility.ability = -1
+                elif v is 1:
+                    userAbility.ability = 1 
+                else:
+                    print("ERROR: ability value")
+                userAbility.save()
             else:
                 print("something wrong")
     return render(request, 'home.html')
@@ -59,7 +69,7 @@ def getFreqWords (request):
         whetherList = []
         for ua in userAbilities:
             if ua.ability == 0:
-                whetherWord = getattr(ua.word, word)
+                whetherWord = getattr(ua.word, 'word')
                 whetherList.append(whetherWord)
         if len(whetherList) < 15:
             words = open ('../freqWord.txt', 'r').read().split()
