@@ -9,4 +9,4 @@ class Vocabulary (models.Model):
 class Ability (models.Model):
     word = models.ForeignKey(Vocabulary, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    ability = models.IntegerField(default= -1)
+    ability = models.IntegerField(default= 0)

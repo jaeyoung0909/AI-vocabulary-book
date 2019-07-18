@@ -12,6 +12,7 @@ from django.views.decorators.csrf import csrf_protect
 from .models import Vocabulary, Ability
 
 import json
+from random import choice
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm 
@@ -42,9 +43,30 @@ def updateUserAbility (request):
                 for u in User.objects.all():
                     Ability.objects.create(user=u, word=newWord)
                 ua = Ability.objects.get(user=user, word=newWord)
-                ua.ability = 0
+                ua.ability = -1
                 ua.save(['ability'])
             else:
                 print("something wrong")
     return render(request, 'home.html')
+
+def getFreqWords (request):
+    if request.method == 'GET':
+        username = request.user
+        userAbilities = Ability.objects.filter(user=username)
+        if userAbilities.count() <= 0:
+            print("user initialization error")
+            return render(request, 'home.html')
+        whetherList = []
+        for ua in userAbilities:
+            if ua.ability == 0:
+                whetherWord = getattr(ua.word, word)
+                whetherList.append(whetherWord)
+        if len(whetherList) < 15:
+            words = open ('../freqWord.txt', 'r').read().split()
+            while (len(whetherList) < 15):
+                whetherList.append(choice (words))
+        jsonWhetherList = json.dumps(whetherList)
+        return HttpResponse(jsonWhetherList)
+    return render(request, '404.html')
+        
 

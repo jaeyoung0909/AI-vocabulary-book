@@ -1,3 +1,19 @@
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+};
+
 var freqChecker = function wordFreq(string) {
     var words = string.toLowerCase().replace(/[^A-z ]/g,' ').split(/(\s+)/).filter( function(e) { return e.trim().length > 0; } );
     
@@ -22,7 +38,6 @@ var showList = function show() {
     var string = document.getElementById('user_text').value;
     var ordered = freqChecker(string);
     for (var w in ordered) {
-
         var elem = document.createElement('p');
         var word = document.createTextNode(ordered[w][0]);
         var input = document.createElement('INPUT');
@@ -39,21 +54,35 @@ var showList = function show() {
     }
 };
 
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].trim();
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
+var showFreqWords = function showFreqWords() {
+    var xhr = new XMLHttpRequest(),
+        method = "GET",
+        url = "/update/getFreqWords/";
+
+    xhr.open(method, url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('list').innerHTML = "";
+            words = JSON.parse(this.responseText);
+            for (var w in words) {
+                var elem = document.createElement('p');
+                var word = document.createTextNode(words[w]);
+                var input = document.createElement('INPUT');
+                input.setAttribute ('type', 'checkbox');
+                input.setAttribute ('class', 'known_checker');
+                input.setAttribute ('value', words[w]);
+                elem.appendChild (word);
+                elem.appendChild (input);
+                document.getElementById('list').appendChild (elem); 
             }
+            console.log(words);
+            console.log('send complete');
         }
-    }
-    return cookieValue;
-};
+    };
+    xhr.send();
+}
+
 
 var submit = function submit() {
     var list = document.getElementsByClassName('known_checker');
