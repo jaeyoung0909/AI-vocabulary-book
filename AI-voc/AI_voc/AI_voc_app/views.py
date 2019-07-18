@@ -48,3 +48,5 @@ def updateUserAbility (request):
                 print("something wrong")
     return render(request, 'home.html')
 
+def recommendedWords(request):
+    return render(request, 'recommendations.html')
