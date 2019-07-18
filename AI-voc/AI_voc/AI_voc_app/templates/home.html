@@ -13,7 +13,8 @@
     <textarea id="user_text", rows="10", cols="50">
     </textarea>
   
-    <button type="button", onclick="showList()">frequency check</button>
+    <button type="button", onclick="showList()">frequency words</button>
+    <button type="button", onclick="showFreqWords()">selected freqency words</button>
 
     <div id='list'>
 
@@ -23,7 +24,7 @@
 
     <p>
       <p>
-          user  {{ user.username }}
+          user : {{ user.username }}
       </p>
       <a href="{% url 'logout' %}">logout</a>
     </p>
