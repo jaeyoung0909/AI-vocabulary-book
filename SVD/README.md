@@ -23,6 +23,7 @@ Entries : represents familiar words as value 1, unfamiliar words as value -1, un
 
 
 ##USAGES:
+
 1. randomMatrixGenerator.py : python3 randomMatrixGenerator.py n m (ex, python3 randomMatrixGenerator.py 10 10)
 
 
