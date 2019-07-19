@@ -1,3 +1,7 @@
+# randomMatrixGenerator.py : Python program for create randomly generated matrix by given size.
+# Created on 18/07/2019 by Shawn Park.
+# Lastest modification : 18/07/2019.
+
 import numpy as np
 import sys
 
