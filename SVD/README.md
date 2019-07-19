@@ -1,6 +1,6 @@
 Created on 18/07/2019 by Shawn Park.
 
-#This directory "SVD" is a directory for recommendation system using SVD.
+# This directory "SVD" is a directory for recommendation system using SVD.
 
 SVD
   |-- svd.py : python program for SVD.
@@ -22,7 +22,7 @@ Entries : represents familiar words as value 1, unfamiliar words as value -1, un
 
 
 
-##USAGES:
+## USAGES:
 
 1. randomMatrixGenerator.py : python3 randomMatrixGenerator.py n m (ex, python3 randomMatrixGenerator.py 10 10)
 
