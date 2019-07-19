@@ -4,12 +4,17 @@ Created on 18/07/2019 by Shawn Park.
 
 SVD
   |-- svd.py : python program for SVD.
+  
   |-- randomMatrixGenerator.py: python program for randomly generated matrix.
+  
   |-- input.csv : input file for svd.py
+  
   |-- output.csv : output file from svd.py
+  
   |-- random.csv : result csv file of randomMatrixGenerator.py
+  
   |-- README.md
-
+  
 
 
 ## BASIC INFO:
