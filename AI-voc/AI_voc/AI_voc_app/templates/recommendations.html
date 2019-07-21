@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Recommendations
+{% endblock %}
+
+{% block content %}
+    <a href="/">Home</a>
+    
+    <h1>Recommended for Study:</h1>
+
+    {% if userRecommendedWords.count == 0 %}
+        <p>No words to recommend.</p>
+    {% else %}
+        <ol type="1">
+        {% for uRWord in userRecommendedWords %}
+            <li>{{ uRWord.word.word }}</li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+
+    <p>
+        <p>
+            user : {{ user.username }}
+        </p>
+        <a href="{% url 'logout' %}">logout</a>
+    </p>
+{% endblock %}

@@ -59,6 +59,7 @@ def updateUserAbility (request):
                 print("something wrong")
     return render(request, 'home.html')
 
+<<<<<<< HEAD
 def getFreqWords (request):
     if request.method == 'GET':
         username = request.user
@@ -80,3 +81,9 @@ def getFreqWords (request):
     return render(request, '404.html')
         
 
+=======
+def recommendedWords (request):
+    user = User.objects.all().last()
+    userRecommendedWords = Ability.objects.filter(user=user, ability__lte=0.5)
+    return render(request, 'recommendations.html', {'userRecommendedWords':userRecommendedWords})
+>>>>>>> branch_alex
