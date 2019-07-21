@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/recommendations.css' %}">
+{% endblock%}
+
 {% block title %}
     Recommendations
 {% endblock %}
@@ -9,16 +14,18 @@
     
     <h1>Recommended for Study:</h1>
 
+    <!-- List the likely-unknown words -->
     {% if userRecommendedWords.count == 0 %}
         <p>No words to recommend.</p>
     {% else %}
         <ol type="1">
         {% for uRWord in userRecommendedWords %}
-            <li>{{ uRWord.word.word }}</li>
+            <li class="displayRecWord">{{ uRWord.word.word }}</li>
         {% endfor %}
         </ol>
     {% endif %}
 
+    <!-- User info & logout -->
     <p>
         <p>
             user : {{ user.username }}

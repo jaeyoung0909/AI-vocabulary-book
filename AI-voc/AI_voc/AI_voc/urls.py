@@ -30,4 +30,5 @@ urlpatterns = [
     path('accounts/', include('AI_voc_app.urls')),
     path('update/', include('AI_voc_app.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('AI_voc_app.urls')),
 ]
