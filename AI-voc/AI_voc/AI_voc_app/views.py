@@ -68,7 +68,7 @@ def getFreqWords (request):
             return render(request, 'home.html')
         whetherList = []
         for ua in userAbilities:
-            if ua.ability == 0:
+            if ua.ability == 0 and len(whetherList) < 15:
                 whetherWord = getattr(ua.word, 'word')
                 whetherList.append(whetherWord)
         if len(whetherList) < 15:
