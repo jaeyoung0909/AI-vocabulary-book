@@ -4,7 +4,7 @@ Created on 18/07/2019 by Shawn Park.
 
 SVD
 
-  |-- svd.py : python program for SVD.
+  |-- singluarValueDecomp.py : python program for SVD.
   
   |-- randomMatrixGenerator.py: python program for randomly generated matrix.
   
@@ -33,4 +33,4 @@ Entries : represents familiar words as value 1, unfamiliar words as value -1, un
 1. randomMatrixGenerator.py : python3 randomMatrixGenerator.py n m (ex, python3 randomMatrixGenerator.py 10 10)
 
 
-2. svd.py : python3 svd.py <filename.csv> (ex. python3 svd.py input.csv)
+2. singularValueDecomp.py : import singularValueDecomp
