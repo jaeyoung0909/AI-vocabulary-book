@@ -14,6 +14,8 @@ from .models import Vocabulary, Ability
 import json
 from random import choice
 
+from .singularValueDecomp import singularValueDecomp as svd
+
 class SignUp(generic.CreateView):
     form_class = UserCreationForm 
     success_url = reverse_lazy('initUserAbility')
@@ -80,9 +82,35 @@ def getFreqWords (request):
     return render(request, '404.html')
         
 def getData ():
-    colNum = Vocabulary.objects().all().count()
-    rowNum = User.objects().all().count() 
+    colNum = Vocabulary.objects.all().count()
+    rowNum = User.objects.all().count() 
 
-    for a in Ability.objects().all():
-        getattr(a, 'user')
-    return 
+    data = []
+    for i in range(rowNum):
+        data.append([0]*colNum)
+    
+    userMap, wordMap = {}, {}
+    userIdx, wordIdx = 0, 0
+
+
+    for a in User.objects.all():
+        userMap[getattr(a, 'username')] = userIdx
+        userIdx += 1
+
+    for a in Vocabulary.objects.all():
+        wordMap[getattr(a, 'word')] = wordIdx
+        wordIdx += 1
+   
+    for a in Ability.objects.all():
+        col = getattr(getattr(a, 'word'), 'word') 
+        row = getattr(getattr(a, 'user'), 'username')
+
+        data[userMap[row]][wordMap[col]] = getattr(a, 'ability')
+
+    return data
+
+def svdRecommand (request):
+    data = getData()
+    temp = svd(data)
+    print(temp)
+    return render(request, '404.html')
