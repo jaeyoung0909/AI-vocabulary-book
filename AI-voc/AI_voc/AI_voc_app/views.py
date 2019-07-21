@@ -79,4 +79,10 @@ def getFreqWords (request):
         return HttpResponse(jsonWhetherList)
     return render(request, '404.html')
         
+def getData ():
+    colNum = Vocabulary.objects().all().count()
+    rowNum = User.objects().all().count() 
 
+    for a in Ability.objects().all():
+        getattr(a, 'user')
+    return 
