@@ -48,5 +48,7 @@ def updateUserAbility (request):
                 print("something wrong")
     return render(request, 'home.html')
 
-def recommendedWords(request):
-    return render(request, 'recommendations.html')
+def recommendedWords (request):
+    user = User.objects.all().last()
+    userRecommendedWords = Ability.objects.filter(user=user, ability__lte=0.5)
+    return render(request, 'recommendations.html', {'userRecommendedWords':userRecommendedWords})
