@@ -81,7 +81,6 @@ def getFreqWords (request):
         return HttpResponse(jsonWhetherList)
     return render(request, '404.html')
         
-<<<<<<< HEAD
 # getData : retrive the data from DB, create 2D matrix.
 def getData ():
     # Count the number of columns and rows.
