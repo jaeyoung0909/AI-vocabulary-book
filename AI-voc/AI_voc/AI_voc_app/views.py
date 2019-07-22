@@ -81,26 +81,33 @@ def getFreqWords (request):
         return HttpResponse(jsonWhetherList)
     return render(request, '404.html')
         
+# getData : retrive the data from DB, create 2D matrix.
 def getData ():
+    # Count the number of columns and rows.
     colNum = Vocabulary.objects.all().count()
     rowNum = User.objects.all().count() 
 
+    # Initialization of matrix
     data = []
     for i in range(rowNum):
         data.append([0]*colNum)
     
+    # Mapping between username and index / between word and index
     userMap, wordMap = {}, {}
     userIdx, wordIdx = 0, 0
 
 
+    # Construct the mapping between username and index(row number).
     for a in User.objects.all():
         userMap[getattr(a, 'username')] = userIdx
         userIdx += 1
 
+    # Construct the mapping between word and index(column number).
     for a in Vocabulary.objects.all():
         wordMap[getattr(a, 'word')] = wordIdx
         wordIdx += 1
-   
+
+    # Assign the value for the matrix.
     for a in Ability.objects.all():
         col = getattr(getattr(a, 'word'), 'word') 
         row = getattr(getattr(a, 'user'), 'username')
@@ -109,8 +116,7 @@ def getData ():
 
     return data
 
-def svdRecommand (request):
-    data = getData()
-    temp = svd(data)
-    print(temp)
-    return render(request, '404.html')
+# svdRecommandation : using data from getData(), calc SVD and return it.
+def svdRecommandation ():
+    return svd(getData())
+

@@ -7,5 +7,5 @@ urlpatterns = [
     path('initUserAbility/', views.initUserAbility, name='initUserAbility'),
     path('updateUserAbility/', views.updateUserAbility, name='updateUserAbility'),
     path('getFreqWords/', views.getFreqWords, name='getFreqWords'),
-    path('getRecommands/', views.svdRecommand, name='svdRecommand')
+    path('getRecommands/', views.svdRecommandation, name='svdRecommandation')
 ]
