@@ -11,9 +11,9 @@ Date         : July. 22. 2019
 
 #### scenario 1. 
 1. connect AI vocabulary book website; click 'sign up'; type 
-- name = <jae>
-- password = <jaejae1498>
-- password confirmation = <jaejae1498>
+- name = "jae"
+- password = "jaejae1498"
+- password confirmation = "jaejae1498"
 - click 'sign up' button
 - User should see text area in redirected web page
 
@@ -21,8 +21,8 @@ Date         : July. 22. 2019
 1. connect AI vocabulary book website; click 'log in'; 
 2. User should see id, passward submit box
 3. type 
-- name = <admin>
-- password = <aivoc>
+- name = "admin"
+- password = "aivoc"
 - User should see text area in redirected web page
 
 ## Sprint 2
