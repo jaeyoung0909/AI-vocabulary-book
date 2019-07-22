@@ -121,9 +121,7 @@ def getData ():
 def svdRecommandation ():
     return svd(getData())
 
-=======
 def recommendedWords (request):
     user = User.objects.all().last()
     userRecommendedWords = Ability.objects.filter(user=user, ability__lte=0.5)
     return render(request, 'recommendations.html', {'userRecommendedWords':userRecommendedWords})
->>>>>>> ca3f9bd4769c09f299fd98185fa0a1418def9aaa
