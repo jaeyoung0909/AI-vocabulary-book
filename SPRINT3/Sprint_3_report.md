@@ -1,6 +1,6 @@
 # AI Vocabulary
 
-​																										July. 23. 2019
+July 23rd, 2019
 
 ## Actions to stop doing 
 
