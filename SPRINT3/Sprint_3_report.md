@@ -29,7 +29,7 @@
 
 
 ## Work Completion Rate
-- User stories completed: 1 / 2
+- User stories completed: 2 / 2
 - Completed Ideal Working Hours: 24
 - Days for Prior Sprint: 7
 - User Stories / Day: 2/7 
