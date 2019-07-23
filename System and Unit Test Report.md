@@ -10,7 +10,7 @@ Date         : July. 22. 2019
 "As a user , I want a login system to get into the site to access the vocabulary book."
 
 #### scenario 1. 
-1. connect AI vocabulary book website; click 'sign up'; type 
+1. Connect AI vocabulary book website; click 'sign up'; type 
 - name = "jae"
 - password = "jaejae1498"
 - password confirmation = "jaejae1498"
@@ -18,9 +18,9 @@ Date         : July. 22. 2019
 - User should see text area in redirected web page
 
 #### scenario 2. 
-1. connect AI vocabulary book website; click 'log in'; 
+1. Connect AI vocabulary book website; click 'log in'; 
 2. User should see id, passward submit box
-3. type 
+3. Type 
 - name = "admin"
 - password = "aivoc"
 - User should see text area in redirected web page
@@ -31,7 +31,7 @@ Date         : July. 22. 2019
 " As a user, I want to input texts to see the frequencies of the words in the text "
 
 #### scenario 1.
-1. connect AI vocabulary book website; click 'log in'; type
+1. Connect AI vocabulary book website; click 'log in'; type
 - name = 'admin'
 - password = 'aivoc'
 - User should see text area in redirected web page
@@ -44,8 +44,8 @@ Date         : July. 22. 2019
 "" As a user, I want to review my unknwon words, so that I can see what words were previously unknwon (they still might be unfamiliar). "
 
 #### scenario 1.
-1. connect AI vocabulary book website; click 'log in'; type 
+1. Connect AI vocabulary book website; click 'log in'; type 
 - name = 'admin'
 - password = 'aivoc'
 - User should see 'Recommandations' button under the text area
-2. click 'Recommandations' button; User should see words list which is unfamiliar.
+2. Click 'Recommandations' button; User should see words list which is unfamiliar.
