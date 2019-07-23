@@ -3,7 +3,7 @@
 
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'css/recommendations.css' %}">
-{% endblock%}
+{% endblock %}
 
 {% block title %}
     Recommendations
@@ -20,8 +20,9 @@
     {% else %}
         <ol type="1">
         {% for uRWord in userRecommendedWords %}
-            <li class="displayRecWord">{{ uRWord.word.word }}</li>
+            <li id="displayRecWord">{{ uRWord.word.word }}</li>
         {% endfor %}
+        <script type="text/javascript" src="{% static 'js/translate.js' %}"></script>
         </ol>
     {% endif %}
 
