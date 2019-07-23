@@ -7,18 +7,18 @@ Date         : July. 22. 2019
 ## Sprint 1
 
 ### User story 1
-"As a user , I want a login system to get into the site to access the vocabulary book."
+"As a user, I want a login system to get into the site to access the vocabulary book."
 
 #### scenario 1. 
 1. Connect AI vocabulary book website; click 'sign up'; type 
-- name = "jae"
-- password = "jaejae1498"
-- password confirmation = "jaejae1498"
-- click 'sign up' button
+- Name = "jae"
+- Password = "jaejae1498"
+- Password confirmation = "jaejae1498"
+- Click 'sign up' button
 - User should see text area in redirected web page
 
 #### scenario 2. 
-1. Connect AI vocabulary book website; click 'log in'; 
+1. Connect to AI vocabulary book website; click 'log in'; 
 2. User should see id, passward submit box
 3. Type 
 - name = "admin"
