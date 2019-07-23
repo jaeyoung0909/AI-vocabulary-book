@@ -55,3 +55,10 @@ Date         : July 22nd, 2019
 - Password = 'aivoc'
 - User should see 'Recommendations' button under the text area
 3. Click 'Recommendations' button - the user should see a list of their unfamiliar words.
+
+
+
+# Unit Tests
+### Refer to Testing.md
+
+We have 3 models User, Vocabulary and Ability. And make test code to check whether they work properly.
