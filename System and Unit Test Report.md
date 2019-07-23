@@ -30,13 +30,22 @@ Date         : July. 22. 2019
 ### User story 1
 " As a user, I want to input texts to see the frequencies of the words in the text "
 
-
+#### scenario 1.
+1. connect AI vocabulary book website; click 'log in'; type
+- name = 'admin'
+- password = 'aivoc'
+- User should see text area in redirected web page
+2. Copy CNN articles which I am reading; Paste it in the text area; click 'frequency words'
+3. User should see at most 17 words list under the text area
 
 ## Sprint 3
 
 ### User story 1
-"As a user, I want to take quizzes so that the app can give me more personalized & specific word recommendations. "
-
-### User story 2
 "" As a user, I want to review my unknwon words, so that I can see what words were previously unknwon (they still might be unfamiliar). "
 
+#### scenario 1.
+1. connect AI vocabulary book website; click 'log in'; type 
+- name = 'admin'
+- password = 'aivoc'
+- User should see 'Recommandations' button under the text area
+2. click 'Recommandations' button; User should see words list which is unfamiliar.
