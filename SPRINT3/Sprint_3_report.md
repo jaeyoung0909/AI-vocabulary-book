@@ -32,4 +32,4 @@ July 23rd, 2019
 - User Stories / Day: (# completed user stories)/7
 - Ideal Working Hours / Day: 38/7 ~= 5.43
 
-![burnupChart](./finalBurnUpChart.jpeg)
+![burnupChart](./image0.jpg)
