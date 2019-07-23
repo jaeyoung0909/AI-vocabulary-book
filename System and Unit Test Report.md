@@ -1,5 +1,7 @@
 Product name : AI vocabulary book
+
 Team name    : AI vocabulary book
+
 Date         : July 22nd, 2019 
 
 # System Test scenarios
@@ -48,7 +50,7 @@ Date         : July 22nd, 2019
 
 #### scenario 1.
 1. Connect AI vocabulary book website and click 'log in'
-2. Ttype 
+2. Type 
 - Name = 'admin'
 - Password = 'aivoc'
 - User should see 'Recommendations' button under the text area
