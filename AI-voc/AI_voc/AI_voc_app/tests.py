@@ -13,13 +13,16 @@ class VocabularyTest(TestCase):
         v = self.setUp()
         self.assertTrue(isinstance(v, Vocabulary))
         self.assertEqual("example", v.word)
-    
+
+# Tests for Ability Objects.
 class AbilityTest(TestCase):
     
+    # Create the test object.
     def setUp(self):
         self.word = Vocabulary.objects.create(word = "example")
         self.user = User.objects.create(username = "testUser", password = "testPassword")
 
+    # Test the Ability model works well.
     def testValidity(self):
         Ab = Ability.objects.create(word = self.word, user = self.user, ability = 1)
         
