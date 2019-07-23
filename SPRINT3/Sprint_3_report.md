@@ -22,10 +22,10 @@
 
 
 ## Work Completion Rate
-- User stories completed: 
+- User stories completed: -/2
 - Completed Ideal Working Hours: 38
 - Days for Prior Sprint: 7
-- User Stories / Day: /7
+- User Stories / Day: -/7
 - Ideal Working Hours / Day: 38/7 ~= 5.43
 
 ![burnupChart](./finalBurnUpChart.jpeg)
