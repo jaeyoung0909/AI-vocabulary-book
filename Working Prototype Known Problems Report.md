@@ -6,6 +6,7 @@ Date : July. 22. 2019
 
 # Problems 
 
-1. We did not sufficient experience for finding good threshold and did not evaluate our accuracy, so we don not know how well estimated.
-2. Our frequency checker can not decide whether the word in articles is a real word, so frequency words list can contain words which is not real words.
-3. If user's words ability data is not much overlap with existing data, our recommandation system does not inference well.
+1. We did not have sufficient experience for finding a good threshold and did not evaluate our accuracy, so we do not know how well estimated it is.
+2. Our frequency checker can not decide whether words found in submitted articles are real words, so frequency words list can contain words which are not real words.
+3. If a user's words ability data does overlap ebough with the existing data, our recommendation system does not make good inferences.
+4. Numerous problems attempting to implement a translation API; as such, translations are not available.
