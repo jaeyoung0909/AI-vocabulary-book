@@ -1,38 +1,35 @@
 # AI Vocabulary
 
-​																										July. 22. 2019
+July 23rd, 2019
 
 ## Actions to stop doing 
 
-- Stop working on learning spikes.
+- Nothing
 
 ## Actions to start doing
 
-- Start pair programming 
-
+- Do pair programming
 
 ## Actions to keep doing
 
-- regular in-person meetings with "daily" scrum
-- answer the three daily scrum questions
-- more knowledgeable teammates give help to the less knowledgeable teammates
+- Regular in-person meetings with "daily" scrum
+- Answer the three daily scrum questions
+- More knowledgeable teammates give help to the less knowledgeable teammates
 
 ## Work completed 
 
 
-- Understand SVD algorithm and implement SVD using JS (2)
-- Gather learning data & Estimate accuracy of SVD (11)
-- UI for recommended words list using HTML and CSS & Attach UI to Django app (2)
-- Apply translation API (1)
-- UI for review page (5)
-- Construct quiz system (3)
+- Understand SVD algorithm and implement SVD using JS
+- Gather learning data & Estimate accuracy of SVD
+- UI for recommended words list using HTML and CSS & Attach UI to Django app
+- (jae, add to this for any work you do)
 
 
 ## Work Completion Rate
-- User stories completed: 1 / 2
-- Completed Ideal Working Hours: 24
+- User stories completed: (jae, say how many user stories were completed)/2
+- Completed Ideal Working Hours: 38
 - Days for Prior Sprint: 7
-- User Stories / Day: 2/7 
-- Ideal Working Hours / Day: 34/7 ~= 5
+- User Stories / Day: (# completed user stories)/7
+- Ideal Working Hours / Day: 38/7 ~= 5.43
 
-![burnupChart](./finalBurnUpChart.jpeg)
+![burnupChart](./image0.jpg)
