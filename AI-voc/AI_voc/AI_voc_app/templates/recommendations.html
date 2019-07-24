@@ -3,6 +3,7 @@
 
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'css/recommendations.css' %}">
+    <script type="text/javascript" src="{% static 'js/quizGenerator.js' %}"></script>
 {% endblock %}
 
 {% block title %}
@@ -22,8 +23,14 @@
         {% for key, value in userRecommendedWords.items %}
             <li class="word">{{ key }} : {{ value }}</li>
         {% endfor %}
-        <!-- <script type="text/javascript" src="{% static 'js/translate.js' %}"></script> -->
+        <script type="text/javascript" src="{% static 'js/browserCache.js' %}"></script>
         </ol>
+
+        <h1>Quiz</h1>
+        <button onClick="generator()">Generate!</button>
+        <p>click word to see meaning</p>
+        <p id = "quizWord" onClick="showMeaning()"></p>
+        
     {% endif %}
 
     <!-- User info & logout -->

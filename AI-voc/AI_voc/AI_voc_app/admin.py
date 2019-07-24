@@ -1,7 +1,6 @@
 from django.contrib import admin
-from .models import Vocabulary, Ability 
+from .models import Vocabulary, Ability, Dictionary 
 
 admin.site.register(Vocabulary)
 admin.site.register(Ability)
-
-# Register your models here.
+admin.site.register(Dictionary)

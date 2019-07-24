@@ -1,8 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group 
-# from rest_framework import viewsets 
-# from AI_voc_app.serializers import UserSerializer, GroupSerializer 
 
 from django.contrib.auth.forms import UserCreationForm 
 from django.urls import reverse_lazy, reverse
