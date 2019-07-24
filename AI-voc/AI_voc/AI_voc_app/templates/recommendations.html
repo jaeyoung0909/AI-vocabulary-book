@@ -19,10 +19,10 @@
         <p>No words to recommend.</p>
     {% else %}
         <ol type="1">
-        {% for uRWord in userRecommendedWords %}
-            <li id="displayRecWord">{{ uRWord.word.word }}</li>
+        {% for key, value in userRecommendedWords.items %}
+            <li class="word">{{ key }} : {{ value }}</li>
         {% endfor %}
-        <script type="text/javascript" src="{% static 'js/translate.js' %}"></script>
+        <!-- <script type="text/javascript" src="{% static 'js/translate.js' %}"></script> -->
         </ol>
     {% endif %}
 

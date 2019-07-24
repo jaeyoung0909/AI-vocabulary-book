@@ -13,6 +13,7 @@ from .models import Vocabulary, Ability
 
 import json
 from random import choice
+import urllib.request
 
 from .singularValueDecomp import singularValueDecomp as svd
 
@@ -107,6 +108,10 @@ def getData ():
         wordMap[getattr(a, 'word')] = wordIdx
         wordIdx += 1
 
+    inverseWordMap = {}
+    for key, value in wordMap.items():
+        inverseWordMap[value] = key
+
     # Assign the value for the matrix.
     for a in Ability.objects.all():
         col = getattr(getattr(a, 'word'), 'word') 
@@ -114,13 +119,47 @@ def getData ():
 
         data[userMap[row]][wordMap[col]] = getattr(a, 'ability')
 
-    return data
+    return [data, userMap, inverseWordMap]
 
 # svdRecommandation : using data from getData(), calc SVD and return it.
 def svdRecommandation ():
-    return svd(getData())
+    data = getData()
+    return [svd(data[0]), data[1], data[2]] 
 
 def recommendedWords (request):
-    user = User.objects.all().last()
-    userRecommendedWords = Ability.objects.filter(user=user, ability__lte=0.5)
-    return render(request, 'recommendations.html', {'userRecommendedWords':userRecommendedWords})
+    data = svdRecommandation ()
+    svdData = data[0]
+    userIndicator = data[1]
+    wordIndicator = data[2]
+    userName = request.user.username 
+    userIndex = userIndicator[userName]
+    
+    userRecommendedWords = []
+    wordIndex = 0
+    for ability in svdData[userIndex]:
+        if ability < 0.5:
+            userRecommendedWords.append(wordIndicator[wordIndex])
+        wordIndex += 1
+
+    wordMeaningSet = {}
+
+    client_id = 'yMeEOKTw4jbUprPkdhTd'
+    client_secret = '8Ox8BMOi_k'
+    url = "https://openapi.naver.com/v1/papago/n2mt"
+    translateRequest = urllib.request.Request(url)
+    translateRequest.add_header("X-Naver-Client-Id",client_id)
+    translateRequest.add_header("X-Naver-Client-Secret",client_secret)
+
+    for word in userRecommendedWords:
+        encText = urllib.parse.quote(word)
+        formData = "source=en&target=ko&text=" + encText
+        translateResponse = urllib.request.urlopen(translateRequest, data=formData.encode("utf-8"))
+        rescode = translateResponse.getcode()
+        if(rescode==200):
+            response_body = translateResponse.read().decode('utf-8')
+            korean = json.loads(response_body)['message']['result']['translatedText']
+            wordMeaningSet[word] = korean
+        else:
+            print("Error Code:" + rescode)
+    print(wordMeaningSet)
+    return render(request, 'recommendations.html', {'userRecommendedWords':wordMeaningSet})
