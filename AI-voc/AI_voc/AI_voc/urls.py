@@ -29,6 +29,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('AI_voc_app.urls')),
     path('update/', include('AI_voc_app.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('', include('AI_voc_app.urls')),
+    path('inference/', include('AI_voc_app.urls')),
+    path('', include('django.contrib.auth.urls')),
 ]
