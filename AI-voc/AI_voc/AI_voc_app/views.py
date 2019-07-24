@@ -9,12 +9,14 @@ from django.urls import reverse_lazy, reverse
 from django.views import generic 
 from django.views.decorators.csrf import csrf_protect
 
-from .models import Vocabulary, Ability
+from .models import Vocabulary, Ability, Dictionary
 
 import json
 from googletrans import Translator
 from random import choice
 import urllib.request
+from urllib.request import urlopen
+from bs4 import BeautifulSoup 
 
 from .singularValueDecomp import singularValueDecomp as svd
 
@@ -137,19 +139,36 @@ def recommendedWords (request):
     
     userRecommendedWords = []
     wordIndex = 0
+    print(len(svdData[userIndex]))
     for ability in svdData[userIndex]:
-        if ability < 0.5:
+        if ability < 0:
             userRecommendedWords.append(wordIndicator[wordIndex])
         wordIndex += 1
 
     wordMeaningSet = {}
-    translator = Translator ()
     for word in userRecommendedWords:
-        wordMeaningSet[word] = translator.translate(word, src='en', dest='ko').text
+        dictObj, created = Dictionary.objects.get_or_create(word=word)
+        dictObj.save()
+        if dictObj.meaning is '':
+            html = urlopen("https://endic.naver.com/search.nhn?sLn=kr&searchOption=all&query=" + word)
+            bsObject = BeautifulSoup(html, 'html.parser')
+            meaning = bsObject.find("span", {'class':'fnt_k05'}).text
+            dictObj.meaning = meaning 
+            dictObj.save()
+        else:
+            meaning = dictObj.meaning 
+        wordMeaningSet[word] = meaning 
 
     return render(request, 'recommendations.html', {'userRecommendedWords':wordMeaningSet})
 
-def papagoTranslate(recommendedWords):
+def googleTranslator (recommendedWords):
+    wordMeaningSet = {}
+    translator = Translator ()
+    for word in recommendedWords:
+        wordMeaningSet[word] = translator.translate(word, src='en', dest='ko').text
+    return wordMeaningSet
+
+def papagoTranslator (recommendedWords):
     wordMeaningSet = {}
 
     client_id = 'yMeEOKTw4jbUprPkdhTd'
