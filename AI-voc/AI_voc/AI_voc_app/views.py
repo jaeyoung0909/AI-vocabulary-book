@@ -12,6 +12,7 @@ from django.views.decorators.csrf import csrf_protect
 from .models import Vocabulary, Ability
 
 import json
+from googletrans import Translator
 from random import choice
 import urllib.request
 
@@ -142,6 +143,14 @@ def recommendedWords (request):
         wordIndex += 1
 
     wordMeaningSet = {}
+    translator = Translator ()
+    for word in userRecommendedWords:
+        wordMeaningSet[word] = translator.translate(word, src='en', dest='ko').text
+
+    return render(request, 'recommendations.html', {'userRecommendedWords':wordMeaningSet})
+
+def papagoTranslate(recommendedWords):
+    wordMeaningSet = {}
 
     client_id = 'yMeEOKTw4jbUprPkdhTd'
     client_secret = '8Ox8BMOi_k'
@@ -150,7 +159,7 @@ def recommendedWords (request):
     translateRequest.add_header("X-Naver-Client-Id",client_id)
     translateRequest.add_header("X-Naver-Client-Secret",client_secret)
 
-    for word in userRecommendedWords:
+    for word in recommendedWords:
         encText = urllib.parse.quote(word)
         formData = "source=en&target=ko&text=" + encText
         translateResponse = urllib.request.urlopen(translateRequest, data=formData.encode("utf-8"))
@@ -161,5 +170,4 @@ def recommendedWords (request):
             wordMeaningSet[word] = korean
         else:
             print("Error Code:" + rescode)
-    print(wordMeaningSet)
-    return render(request, 'recommendations.html', {'userRecommendedWords':wordMeaningSet})
+    return wordMeaningSet
